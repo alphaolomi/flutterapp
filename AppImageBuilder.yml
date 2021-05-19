@@ -2,17 +2,17 @@
 version: 1
 script:
  - rm -rf AppDir || true
- - cp -r build/linux/x64/release/bundle AppDir
+ - cp -r build/linux/release/bundle AppDir
  - mkdir -p AppDir/usr/share/icons/hicolor/64x64/apps/
  - cp flutter-mark-square-64.png AppDir/usr/share/icons/hicolor/64x64/apps/
 AppDir:
   path: ./AppDir
   app_info:
-    id: com.alphaolomi.hello-flutter
-    name: Hello Flutter
+    id: com.alphaolomi.flutterapp
+    name: Flutterapp
     icon: flutter-mark-square-64
     version: latest
-    exec: hello_flutter
+    exec: flutterapp
     exec_args: $@
   apt:
     arch: amd64
